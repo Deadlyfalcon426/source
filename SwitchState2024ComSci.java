@@ -1,5 +1,5 @@
 import java.util.Scanner;
-public class SwitchStatements2024ComSci {
+public class SwitchState2024ComSci {
     public static void main (String[]args){
             @SuppressWarnings("resource")
             Scanner read = new Scanner(System.in);
