@@ -46,6 +46,7 @@ public class Practice2SwitchState2024ComSci {
         }
         return d;
     }
+    @SuppressWarnings("resource")
     public static void main (String[]args){
         Scanner read = new Scanner(System.in);
         System.out.println("Choose operation");
