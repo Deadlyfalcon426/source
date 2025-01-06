@@ -319,6 +319,7 @@ public class RockPaperScissors2024ComSci3 {
             
         }
 
+        System.out.print("Result:   ");
         whoWon(win, loss);
 
     }
