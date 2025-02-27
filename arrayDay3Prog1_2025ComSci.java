@@ -12,7 +12,7 @@ public class arrayDay3Prog1_2025ComSci {
         System.out.println("");
         //prog 2
         for(int i = 0; i<duck.length;i++){
-            if (i%2 == 0){
+            if (i%2 == 1){
             duck[i] *=3;
             }
             System.out.print(duck[i]+" ");
@@ -20,13 +20,32 @@ public class arrayDay3Prog1_2025ComSci {
         System.out.println("");
         System.out.println("");
         //prog 3
-        int temp;
         for(int i = 0; i<duck.length;i++){
             if (i%2==1){
                 duck[i] = duck[i-1];
             }
             System.out.print(duck[i]+" ");
         }
+        System.out.println("");
+        System.out.println("");
+        //pog 4
+        int max = Integer.MIN_VALUE;
+        for(int i = 0; i<duck.length;i++){
+            if (max<duck[i]){
+                max=duck[i];
+        }
+        }
+        System.out.println(max);
+        System.out.println("");
+        System.out.println("");
+        //pog5
+        int maxi = Integer;
+        for(int i = 0; i<duck.length;i++){
+            if(max<duck[i] && duck[i] % 2 == 0){
+
+            }
+        }
+
 
 
     }
