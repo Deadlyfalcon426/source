@@ -11,7 +11,7 @@ public class a2DArraysTask1_2025ComSci{
             }
             System.out.println();
         }
-        System.out.println("!#%$&*%$#@!$#@%#^^$%$*$%#@)%&$^$^$#^%$$%%");
+        System.out.println("!#%$&*%$#@!$#@%#^^$%$*$%#@)%&$^$^$#^%$$$%$*$%#@)%&$^$^$%%");
 
         //B
 
