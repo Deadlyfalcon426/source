@@ -87,11 +87,20 @@ public class Chessboard_2025ComSci {
 
         //  weirdo ahh function
         int Aslope = 0;
-        Aslope = ((Ay-Qy)/(Ax-Qx));
+        if((Ax-Qx) != 0){
+            Aslope = ((Ay-Qy)/(Ax-Qx));
+        }
+        
         int Bslope = 0;
-        Bslope = ((By-Qy)/(Bx-Qy));
+        if((Bx-Qx) != 0){
+            Bslope = ((By-Qy)/(Bx-Qx));
+        }
+        
         int Cslope = 0;
-        Cslope = ((Cy-Qy)/(Cx-Qx));
+        if((Cx-Qx) != 0){
+            Cslope = ((Cy-Qy)/(Cx-Qx));
+        }
+        
         int ConfirmA = 0;
         int ConfirmB = 0;
         int ConfirmC = 0;
@@ -112,7 +121,7 @@ public class Chessboard_2025ComSci {
         if (Qx == Bx || Qy == By || ConfirmB == 1){
             System.out.println("B can be reached by the queen.");
         }
-        if (Qx == Cx || Qy == Qx || ConfirmC == 1){
+        if (Qx == Cx || Qy == Cy || ConfirmC == 1){
             System.out.println("C can be reached by the queen.");
         }
         
