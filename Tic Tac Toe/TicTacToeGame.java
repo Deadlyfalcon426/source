@@ -1,5 +1,20 @@
 import java.util.Scanner;
 public class TicTacToeGame{
+	public static int wincheck(char[][]arr){
+		int z = 0;
+		//
+		for(int p = 0;p<3;p++){
+			if(arr[p][0] == arr[p][1] && arr[p][0] == arr[p][2]){
+				if (arr[p][0]=='x'){
+					z = 1;
+				}
+				if (arr[p][0]=='o'){
+					z = 2;
+				}
+			}
+		}
+		return z;
+	}
 	public static void main(String[] args){
 // This in array is drawing up the board lines. In (xstart, ystart, xend, yend) format
 // Top-Left corner of app window is (0,0) / Bottom-Right corner of app window is (600, 600)
@@ -14,14 +29,9 @@ public class TicTacToeGame{
 				arr[i][j]='-';
 
 // Use This Sample Code to see if pictures are displaying on the board.
-		arr[1][1]='o';
-		arr[2][2]='x';
-		arr[1][2]='o';
-		arr[0][0]='x';
-		arr[0][1]='x';
 System.out.println("arussh");
 String[][] spots = {{"top left", "top middle","top right"},
-					{"middle left","middle","middle right"},
+					{"middle left","the middle","middle right"},
 					{"bottom left","bottom middle","bottom right"}};
 Scanner read = new Scanner(System.in);
 // This line imports the TicTacToeBoard file
@@ -43,6 +53,14 @@ switch (kitaPlayers){
 		System.out.println("There's been an error, please restart the code and be careful to write either 1 or 2");
 	break;
 }
+//THIS PART IS WHERE THE POPUP BEGINS
+TicTacToeBoard board = new TicTacToeBoard(620,720);
+// This sets up the grid given the lines you provided above in the boardLine array
+		board.defineBoard(boardLine);
+// This will set your pictures to display for the x and o values. Make sure your names match exactly what you type in the parameters.
+		board.setFiles("x.png","o.jpg");
+// This sets up the spacing and place values for x and o
+		board.setBoard(arr);
 int game_continue = 1;
 int turn_counter = 0;
 int whose_turn = 0;
@@ -87,16 +105,15 @@ while (game_continue == 1){
 		}
 		
 	}
+	// This will refresh the board so that new elements will display.
+	board.repaint();
+	if (wincheck(arr)!=0){
+		System.out.println("Someone won!");
+		game_continue--;
+	}
 }
 
-//THIS PART IS WHERE THE POPUP BEGINS
-		TicTacToeBoard board = new TicTacToeBoard(620,720);
-// This sets up the grid given the lines you provided above in the boardLine array
-		board.defineBoard(boardLine);
-// This will set your pictures to display for the x and o values. Make sure your names match exactly what you type in the parameters.
-		board.setFiles("x.png","o.jpg");
-// This sets up the spacing and place values for x and o
-		board.setBoard(arr);
+
 // This will refresh the board so that new elements will display.
 		board.repaint();
 
